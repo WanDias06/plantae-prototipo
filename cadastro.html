@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Planta - Plantaê</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>🌱 Cadastro de Plantas</h1>
+    <form id="form-planta">
+        <input type="text" id="nome-planta" placeholder="Nome da planta" required>
+        <input type="text" id="tipo" placeholder="Tipo (folhosa, raiz...)" required>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <h2>Plantas Cadastradas</h2>
+    <ul id="lista-plantas"></ul>
+    <a href="dashboard.html">⬅ Voltar ao Painel</a>
+
+    <script>
+        const form = document.getElementById('form-planta');
+        const lista = document.getElementById('lista-plantas');
+
+        form.onsubmit = function(e) {
+            e.preventDefault();
+            const nome = document.getElementById('nome-planta').value;
+            const tipo = document.getElementById('tipo').value;
+            const item = document.createElement('li');
+            item.textContent = nome + " (" + tipo + ")";
+            lista.appendChild(item);
+            form.reset();
+        };
+    </script>
+</body>
+</html>

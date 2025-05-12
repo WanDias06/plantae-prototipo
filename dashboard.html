@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Plantaê</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>🌿 Painel da Horta</h1>
+        <p id="bemvindo"></p>
+        <a href="cadastro.html">Cadastrar Planta</a>
+    </div>
+
+    <div class="status">
+        <p><strong>Temperatura:</strong> <span id="temp">--</span> °C</p>
+        <p><strong>Umidade do Solo:</strong> <span id="soil">--</span> %</p>
+        <p><strong>Luminosidade:</strong> <span id="light">--</span></p>
+        <p id="alerta"></p>
+    </div>
+
+    <div class="acoes">
+        <button onclick="registrarAcao('Regar')">💧 Regar</button>
+        <button onclick="registrarAcao('Adubar')">🌿 Adubar</button>
+    </div>
+
+    <h2>Histórico de Ações</h2>
+    <ul id="historico"></ul>
+
+    <script src="mock-data.js"></script>
+</body>
+</html>
