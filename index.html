@@ -1,28 +1,27 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Login - Plantaê</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Login - Plantaê</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Plantaê 🌱</h1>
-        <p>Digite seu nome para acessar a horta:</p>
-        <input type="text" id="nome" placeholder="Ex: Prof. João">
-        <button onclick="entrar()">Entrar</button>
-    </div>
-    <script>
-        function entrar() {
-            const nome = document.getElementById("nome").value.trim();
-            if (nome) {
-                sessionStorage.setItem("usuario", nome);
-                window.location.href = "dashboard.html";
-            } else {
-                alert("Digite seu nome!");
-            }
-        }
-    </script>
+  <div class="container">
+    <h1>Plantaê 🌱</h1>
+    <p>Digite seu nome:</p>
+    <input type="text" id="nome" placeholder="Ex: João">
+    <button onclick="entrar()">Entrar</button>
+  </div>
+  <script>
+    function entrar() {
+      const nome = document.getElementById("nome").value.trim();
+      if (nome) {
+        localStorage.setItem("usuario", nome);
+        window.location.href = "dashboard.html";
+      } else {
+        alert("Digite seu nome.");
+      }
+    }
+  </script>
 </body>
 </html>
