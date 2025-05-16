@@ -1,10 +1,11 @@
 const firebaseConfig = {
-  apiKey: "SUA_API_KEY",
-  authDomain: "SUA_AUTH_DOMAIN",
-  databaseURL: "SUA_DATABASE_URL",
-  projectId: "SUA_PROJECT_ID",
-  storageBucket: "SUA_STORAGE_BUCKET",
-  messagingSenderId: "SUA_SENDER_ID",
-  appId: "SUA_APP_ID"
+  apiKey: "AIzaSyBwlMXu8fC253nMHStlzuJcwr7Uh-OWnEA",
+  authDomain: "plantae-app-d1111.firebaseapp.com",
+  databaseURL: "https://plantae-app-d1111-default-rtdb.firebaseio.com",
+  projectId: "plantae-app-d1111",
+  storageBucket: "plantae-app-d1111.firebasestorage.app",
+  messagingSenderId: "292265083240",
+  appId: "1:292265083240:web:32119a9bd4fcd5fb4e16dd",
+  measurementId: "G-47WNF13Y5P"
 };
 firebase.initializeApp(firebaseConfig);
