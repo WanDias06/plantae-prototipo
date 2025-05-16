@@ -1,33 +1,33 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Dashboard - Plantaê</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Dashboard - Plantaê</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="header">
-        <h1>🌿 Painel da Horta</h1>
-        <p id="bemvindo"></p>
-        <a href="cadastro.html">Cadastrar Planta</a>
-    </div>
+  <h1>Dashboard - Horta Inteligente</h1>
+  <p>Bem-vindo(a), <span id="usuario"></span> | <a href="index.html">Sair</a></p>
 
-    <div class="status">
-        <p><strong>Temperatura:</strong> <span id="temp">--</span> °C</p>
-        <p><strong>Umidade do Solo:</strong> <span id="soil">--</span> %</p>
-        <p><strong>Luminosidade:</strong> <span id="light">--</span></p>
-        <p id="alerta"></p>
-    </div>
+  <div class="sensores">
+    <p>🌡️ Temperatura: <span id="temp">--</span> °C</p>
+    <p>💧 Umidade: <span id="umid">--</span> %</p>
+    <p>☀️ Luminosidade: <span id="luz">--</span></p>
+    <p id="alerta"></p>
+  </div>
 
-    <div class="acoes">
-        <button onclick="registrarAcao('Regar')">💧 Regar</button>
-        <button onclick="registrarAcao('Adubar')">🌿 Adubar</button>
-    </div>
+  <div>
+    <button onclick="registrarAcao('Regar')">Regar</button>
+    <button onclick="registrarAcao('Adubar')">Adubar</button>
+    <button onclick="registrarAcao('Colher')">Colher</button>
+    <a href="cadastro.html"><button>Cadastrar Planta</button></a>
+  </div>
 
-    <h2>Histórico de Ações</h2>
-    <ul id="historico"></ul>
+  <canvas id="grafico" width="600" height="300"></canvas>
+  <ul id="historico"></ul>
 
-    <script src="mock-data.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
